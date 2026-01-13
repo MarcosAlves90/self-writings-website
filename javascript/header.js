@@ -1,9 +1,9 @@
 class IndexHeader extends HTMLElement {
   connectedCallback() {
-    this.classList.add('index-header', 'common-max-w', 'common-pad-w');
+    this.classList.add('header', 'common-max-w', 'common-pad-w');
 
     this.innerHTML = `
-      <div class="index-header-top">
+      <div class="header-top">
         <p>writings.dev</p>
         <nav>
           <a>categories</a>
@@ -11,7 +11,7 @@ class IndexHeader extends HTMLElement {
           <a>about</a>
         </nav>
       </div>
-      <div class="index-header-banner">
+      <div class="header-banner">
         <img src="public/logo.svg" alt="Logo">
         <h1>Writings for Developers</h1>
         <h2>Curated collection of articles for busy developers</h2>
@@ -19,4 +19,4 @@ class IndexHeader extends HTMLElement {
     `;
   }
 }
-customElements.define('index-header', IndexHeader);
+customElements.define('custom-header', IndexHeader);

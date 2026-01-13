@@ -39,10 +39,10 @@ body {
     padding: 0 1rem;
 }
 
-.index-header {
+.header {
     display: block;
     padding-top: 3rem;
-    .index-header-top {
+    .header-top {
         display: flex;
         justify-content: space-between;
         font-size: 1.3rem;
@@ -58,7 +58,7 @@ body {
             }
         }
     }
-    .index-header-banner {
+    .header-banner {
         width: 100%;
         display: flex;
         align-items: center;
