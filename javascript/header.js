@@ -1,10 +1,11 @@
 class IndexHeader extends HTMLElement {
   connectedCallback() {
-    this.classList.add('header', 'common-max-w', 'common-pad-w');
+      this.classList.add('header', 'common-max-w', 'common-pad-w');
+      this.setAttribute('id', 'header')
 
     this.innerHTML = `
       <div class="header-top">
-        <p>writings.dev</p>
+        <a href="#header">writings.dev</a>
         <nav>
           <a>categories</a>
           <a>articles</a>
