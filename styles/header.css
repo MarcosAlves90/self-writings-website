@@ -1,61 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap");
-
-:root {
-    --background: #232830;
-    --primary: #fff;
-    --secondary: #909090;
-    --highlight: #ff7575;
-
-    font-family: "Poppins", sans-serif;
-
-    p,
-    h1,
-    h2,
-    h3,
-    body {
-        margin: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: var(--primary);
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-}
-
-html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-body {
-    background-color: var(--background);
-    color: var(--primary);
-}
-
-.divider {
-    border-bottom: 1px solid #2b2f36;
-}
-
-.common-max-w {
-    max-width: 70rem;
-    margin: auto;
-}
-
-.common-pad-w {
-    padding: 0 1rem;
-}
-
 .header {
     display: block;
     padding-top: 2rem;
+    position: relative;
     .header-top {
         display: flex;
         justify-content: space-between;
@@ -69,10 +15,45 @@ body {
             }
         }
 
+        .header-top-hamburger {
+            color: var(--primary);
+            background-color: var(--highlight);
+            display: none;
+        }
+
         @media (max-width: 600px) {
             nav {
                 display: none;
             }
+
+            .header-top-hamburger {
+                display: block;
+            }
+        }
+    }
+    .header-menu-mobile {
+        background-color: rgba(0, 0, 0, 0.161);
+        backdrop-filter: blur(7px);
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+        border-bottom: 1px solid var(--highlight);
+        border-top: 1px solid var(--highlight);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        &.open {
+            display: block;
+        }
+        .header-menu-mobile-button {
+            background-color: var(--highlight);
+            color: var(--primary);
         }
     }
     .header-banner {
